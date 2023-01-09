@@ -1,5 +1,9 @@
 function myfunction() {
-      var answer = window.orientation < 1;
-    document.querySelector("h3").innerText = (answer ? 'Yes' : 'No');
+
+    if (/Mobi/.test(navigator.userAgent)) {
+        document.querySelector("h3").innerText = ("Yes");
+    } else {
+        document.querySelector("h3").innerText = ("No");
+    }
 
 }
